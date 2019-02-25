@@ -1,0 +1,14 @@
+{% extends 'cwApp/movies.html' %}
+<!--child page using block content-->
+{% block subtitle%}
+{{movie_list.movie_title}}
+{% endblock subtitle%}}
+
+{% block content %}
+<p>
+    {{movie_list.movie_details}}
+</p>
+<!--link to home-->
+<a href="{% url 'index' %}">back to home</a>
+
+{% endblock content %}

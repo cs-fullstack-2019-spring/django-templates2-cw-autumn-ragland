@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>base</title>
+</head>
+<body>
+<!--base page/home page using blocks-->
+<h1>My Movies Page</h1>
+
+<h2>
+{% block subtitle%}
+{% endblock subtitle%}
+</h2>
+
+{% block content %}
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Details</th>
+        <th>Synopsis</th>
+    </tr>
+    <!--create table data through iteration-->
+{% for eachMovie in movie_list %}
+    <tr>
+
+    <td>{{eachMovie.movie_title}}</td>
+    <td><a href="{% url 'details' eachMovie.movie_id %}">Movie Details</a> </td>
+    <td><a href="{% url 'synop' eachMovie.movie_id %}">Movie Synopsis</a> </td>
+
+    </tr>
+{% endfor %}
+</table>
+{% endblock content %}
+
+</body>
+</html>
