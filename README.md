@@ -2,7 +2,7 @@ Template inheritance in Django
 
 ### Exercise 1:
 * Create 3 template files. ```movies.html```, ```movie_details``` and ```movie_synopsis.html```
-* Using ```movies.html``` as the parent template, create a basic header with ```<h1>``` that says "My Movies Page" and a named block for a subtitle using an ```<h2>``` tag. In the body add a block named ```content``` iterate the array of dictionay emtries (provided below) and creates a HTML table with 3 columns. 
+* Using ```movies.html``` as the parent template, create a basic header with ```<h1>``` that says "My Movies Page" and a named block for a subtitle using an ```<h2>``` tag. In the body add a block named ```content``` iterate the array of dictionay entries (provided below) and displays in 3 columns using a basic CSS grid. 
 * The first column should diplay the title of the movie
 * The second column should contain the hyperlink ```Movie Details``` with the url generated using the movie's position in the array (e.g. http://localhost:8000:movie_details/2).
 * The 3rd column should contain the hyperlink ```Movie Synopsis``` with the url generated using the movie's position in the array (e.g. http://localhost:8000:movie_synopsis/2).
